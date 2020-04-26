@@ -4,6 +4,18 @@ layout: default
 permalink: "/categories.html"
 ---
 
+<style>
+	.thumbnail-wrapper {
+		max-height: 400px;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+
+	.thumbnail-wrapper img {
+		max-height: initial;
+	}
+</style>
+
 {% assign category_name = page.url | split: "/" | last %}
 {% assign not_showed = true %}
 
