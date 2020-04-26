@@ -2,7 +2,7 @@
 layout: category
 title: 개발자의 필독 수학노트
 permalink: /math
-image: assets/images/screenshot.jpg
+image: assets/images/math-thumbnail.jpeg
 imageshadow: true
 ---
 
