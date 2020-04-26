@@ -29,7 +29,7 @@ permalink: "/categories.html"
 {% endif %}
 
 {% for category in site.categories %}
-{% if category_name == "categories" and category[0] != "example" or category_name == category[0] %}
+{% if category_name == "categories" and category[0] != "Example" or category_name == category[0] %}
 {% if category_name == "categories" %}
 <h4 class="mt-5 mb-neg-30" id="{{ category[0] | replace: " ","-" }}"><span class="text-capitalize badge badge-primary text-small">{{ category[0] }}</span></h4>
 {% endif %}
@@ -50,5 +50,5 @@ permalink: "/categories.html"
 {% endfor %}
 
 {% if not_showed %}
-<h2 class="text-center" style="margin: 100px 0;">해당 카테고리의 컨텐츠가 존재하지 않습니다.</h2>
+<h2 class="text-center" style="margin: 100px 0;">{% if category_name == "categories" %}게시물이 존재하지 않습니다.{% else %}해당 카테고리의 컨텐츠가 존재하지 않습니다.{% endif %}</h2>
 {% endif %}
