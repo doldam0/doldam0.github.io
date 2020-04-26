@@ -8,7 +8,12 @@ permalink: "/categories.html"
 {% assign not_showed = true %}
 
 {% if category_name != "categories" %}
-<p>{{ content }}</p>
+<div class="thumbnail-wrapper">
+	<img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+</div>
+<a class="sitetag category-title" href="{{ page.url }}">{{ page.title }}</a>
+{{ content }}
+<div style="margin-bottom: 50px;"></div>
 {% endif %}
 
 {% for category in site.categories %}
@@ -33,5 +38,5 @@ permalink: "/categories.html"
 {% endfor %}
 
 {% if not_showed %}
-<h2 class="text-center">해당 카테고리의 컨텐츠가 존재하지 않습니다.</h2>
+<h2 class="text-center" style="margin: 100px 0;">해당 카테고리의 컨텐츠가 존재하지 않습니다.</h2>
 {% endif %}

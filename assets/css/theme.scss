@@ -15,6 +15,16 @@ $enable-rounded: false;
 @import 'bootstrap/bootstrap';
 @import 'stars';
 
+// My Custom SCSS
+.thumbnail-wrapper {
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.thumbnail-wrapper img {
+    max-height: initial;
+}
 
 // general
 body, input, button, select, optgroup, textarea {   
