@@ -1,0 +1,37 @@
+---
+title: "카테고리"
+layout: default
+permalink: "/categories.html"
+---
+
+{% assign category_name = page.url | split: "/" | last %}
+{% assign not_showed = true %}
+
+{% if category_name != "categories" %}
+<p>{{ content }}</p>
+{% endif %}
+
+{% for category in site.categories %}
+{% if category_name == "categories" and category[0] != "example" or category_name == category[0] %}
+{% if category_name == "categories" %}
+<h4 class="mt-5 mb-neg-30" id="{{ category[0] | replace: " ","-" }}"><span class="text-capitalize badge badge-primary text-small">{{ category[0] }}</span></h4>
+{% endif %}
+{% assign not_showed = true %}
+{% assign pages_list = category[1] %}
+<div class="blog-grid-container">
+{% for post in pages_list %}
+{% if post.title != null %}
+{% if group == null or group == post.group %}
+{% include postbox.html %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% assign pages_list = nil %}
+{% assign group = nil %}
+</div>
+{% endif %}
+{% endfor %}
+
+{% if not_showed %}
+<h2 class="text-center">해당 카테고리의 컨텐츠가 존재하지 않습니다.</h2>
+{% endif %}
