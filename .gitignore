@@ -2,3 +2,4 @@ _site/
 .jekyll-cache/
 _graphes/
 .vscode/
+node_modules
