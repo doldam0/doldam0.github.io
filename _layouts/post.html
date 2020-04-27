@@ -41,25 +41,29 @@ post_class: post-template
         let node = null;
 
         for (const elem of p_elems) {
-            if (elem.innerText == '+++') {
-                if (is_answer) {
-                    const title = document.createElement('p');
-                    title.classList.add('answer-title');
-                    title.innerText = "풀이 보기"
-                    elem.parentElement.insertBefore(title, elem);
+            if (elem.style.display != 'none' && elem.innerText == '+++') {
+                const title = document.createElement('p');
+                title.classList.add('answer-title');
+                title.innerText = "풀이 보기"
+                elem.parentElement.insertBefore(title, elem);
 
-                    elem.parentElement.insertBefore(node, elem);
-                    node = null;
-                    is_answer = false;
-                } else {
-                    node = document.createElement('div');
-                    node.classList.add('answer');
-                    node.style.display = 'none';
-                    is_answer = true;
+                const node = document.createElement('div');
+                node.classList.add('answer');
+                node.style.display = 'none';
+
+                let now = elem;
+                while (true) {
+                    const sibling = elem.nextSibling;
+                    if (sibling.innerText == '+++') {
+                        sibling.style.display = 'none';
+                        break;
+                    } else {
+                        node.appendChild(sibling);
+                        now = sibling;
+                    }
                 }
+                elem.parentElement.insertBefore(node, elem);
                 elem.style.display = 'none';
-            } else if (is_answer) {
-                node.appendChild(elem);
             }
         }
 
