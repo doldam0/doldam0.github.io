@@ -5,6 +5,21 @@ archive: false
 post_class: post-template
 ---
 
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: orange;
+    }
+
+    td:first-child {
+        background-color: wheat;
+    }
+</style>
+
 <div class="entry-header">
     <!-- Post Title -->
     <h1 class="posttitle">{{ page.title }}</h1>
@@ -88,3 +103,7 @@ https://search.google.com/structured-data/testing-tool/u/0/
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script type="text/javascript" charset="UTF-8"
+ src="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js"></script>
+<link rel="stylesheet" 
+ type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css" />
