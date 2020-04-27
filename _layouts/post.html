@@ -18,7 +18,61 @@ post_class: post-template
     td:first-child {
         background-color: wheat;
     }
+
+    h6 {
+        font-size: 20px;
+        color: orchid;
+    }
+
+    h6 + p {
+        margin-top: 0 !important;
+    }
+
+    .answer-title {
+        color: dodgerblue;
+        cursor: pointer;
+    }
 </style>
+
+<script>
+    window.onload = () => {
+        let is_answer = false;
+        const p_elems = document.querySelectorAll('p');
+        let node = null;
+
+        for (const elem of p_elems) {
+            if (elem.innerText == '+++') {
+                if (is_answer) {
+                    const title = document.createElement('p');
+                    title.classList.add('answer-title');
+                    title.innerText = "풀이 보기"
+                    elem.parentElement.insertBefore(title, elem);
+
+                    elem.parentElement.insertBefore(node, elem);
+                    node = null;
+                    is_answer = false;
+                } else {
+                    node = document.createElement('div');
+                    node.classList.add('answer');
+                    node.style.display = 'none';
+                    is_answer = true;
+                }
+                elem.style.display = 'none';
+            } else if (is_answer) {
+                node.appendChild(elem);
+            }
+        }
+
+        const answers = document.querySelectorAll('.answer-title');
+        for (const answer of answers) {
+            answer.onclick = (e) => {
+                const sender = e.target || e.srcElement;
+                sender.nextElementSibling.style.display = 'block';
+                sender.style.display = 'none';
+            };
+        }
+    }
+</script>
 
 <div class="entry-header">
     <!-- Post Title -->
