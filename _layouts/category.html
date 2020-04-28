@@ -14,6 +14,10 @@ permalink: "/categories.html"
 	.thumbnail-wrapper img {
 		max-height: initial;
 	}
+
+	.category-description {
+		font-size: 20px;
+	}
 </style>
 
 {% assign category_name = page.url | split: "/" | last %}
@@ -24,7 +28,7 @@ permalink: "/categories.html"
 	<img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
 </div>
 <a class="sitetag category-title" href="{{ page.url }}">{{ page.title }}</a>
-{{ content }}
+<div class="category-description">{{ content }}</div>
 <div style="margin-bottom: 50px;"></div>
 {% endif %}
 
