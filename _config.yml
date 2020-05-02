@@ -44,7 +44,7 @@ paginate: 6
 paginate_path: /page:num/
     
 # Other
-highlighter: rough
+highlighter: rouge
 markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
@@ -67,5 +67,8 @@ authorbox: "disabled"
 sass:
   sass_dir: _sass
   style: compressed
+  
+# Analytics
+google_analytics: "UA-164939189-1"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
