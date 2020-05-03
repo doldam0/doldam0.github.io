@@ -32,6 +32,12 @@ post_class: post-template
         color: dodgerblue;
         cursor: pointer;
     }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>
 
 <script>
@@ -64,6 +70,10 @@ post_class: post-template
                 }
                 elem.parentElement.insertBefore(node, elem);
                 elem.style.display = 'none';
+            }
+            if (elem.innerText.split(' ')[0] == '<>') {
+                elem.innerHTML = elem.innerHTML.replace('&lt;&gt;', '');
+                elem.style.textAlign = 'center';
             }
         }
 
