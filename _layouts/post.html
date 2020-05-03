@@ -72,7 +72,7 @@ post_class: post-template
                 elem.style.display = 'none';
             }
             if (elem.innerText.split(' ')[0] == '<>') {
-                elem.innerHTML = elem.innerHTML.replace('&lt;&gt;', '');
+                elem.firstChild.nodeValue = elem.firstChild.nodeValue.replace('<>', '');
                 elem.style.textAlign = 'center';
             }
         }
