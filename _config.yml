@@ -1,7 +1,7 @@
 # Site
 name: "RealCoder"
 title: "RealCoder"
-description: "모두가 쉽게 프로그래밍을 배울 수 있는 그날까지, 열심히 노력하겠습니다."
+description: "쉽고 재미있는 개발 지식은 여기에서!"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
