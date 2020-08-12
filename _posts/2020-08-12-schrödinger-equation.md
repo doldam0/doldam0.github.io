@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[내가 보려고 올리는 양자역학] 슈뢰딩거 방정식"
+title:  "[내가 보려고 올리는 양자역학] 1차원 슈뢰딩거 방정식"
 author: doldam
 categories: [ quantum-physics ]
 image: assets/images/math/limit/main.jpg
