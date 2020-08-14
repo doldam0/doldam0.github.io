@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[내가 보려고 올리는 양자역학] 파동방정식의 규격화"
+title:  "[내가 보려고 올리는 양자역학] 파동함수의 규격화"
 author: doldam
 categories: [ quantum-physics ]
 image: assets/images/math/limit/main.jpg
