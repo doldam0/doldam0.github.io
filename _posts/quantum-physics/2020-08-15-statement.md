@@ -20,11 +20,11 @@ $$ \langle x \rangle = \int_{-\infty}^{\infty} x \vert \Psi \vert^2 dx = \int_{-
 
 표준편차를 알아보기 전에, 먼저 **편차**와 **분산**에 대해 알아보겠습니다. 편차는 특정 데이터에서 기댓값을 뺀 값이고, 분산은 편차의 제곱의 평균입니다. 즉
 
-<> 편차 $$ = x - \langle x \rangle $$
+<> 편차 $$ = \Delta x = x - \langle x \rangle $$
 
 이고
 
-<> 분산 $$ = \sigma^2 = \left\langle (x - \langle x \rangle)^2 \right\rangle $$
+<> 분산 $$ = \sigma^2 = \left\langle \left( \Delta x \right)^2 \right\rangle = \left\langle \left( x - \langle x \rangle \right)^2 \right\rangle $$
 
 입니다.
 
