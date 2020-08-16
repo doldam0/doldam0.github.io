@@ -22,7 +22,7 @@ $$ E \propto nf $$
 
 $$ E = nhf $$
 
-여기서 상수 $$ h $$는 플랑크 상수로, 그 값은 약 $$ \mathrm {6.626 × 10^{-34} m^2 kg / s} $$ 입니다. 따라서 빛 알갱이 하나에 해당하는 에너지는
+여기서 상수 $$ h $$는 플랑크 상수로, 그 값은 약 $$ \mathrm {6.626 \times 10^{-34} m^2 kg / s} $$ 입니다. 따라서 빛 알갱이 하나에 해당하는 에너지는
 
 $$ E = hf $$
 
@@ -127,3 +127,57 @@ $$ \therefore i \hbar \frac{1}{\Psi} \frac{\partial \Psi}{\partial t} = - \frac{
 $$ i \hbar \frac{\partial \Psi}{\partial t} = - \frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V \Psi $$
 
 입니다. 이로써 슈뢰딩거 방정식이 완성되었습니다!
+
+<!--
+
+###### 문제 1
+
+어떤 광자 하나의 파장을 측정해 보았더니 $$ \mathrm{ 331nm } $$였다. 이 광자의 에너지와 운동량을 각각 구하시오.
+
+(단, $$ h = \mathrm{ 6.62 \times 10^{-34} m^2 kg / s} $$, $$ c = \mathrm{3.00 \times 10^8 m/s} $$로 계산한다.)
+
++++
+
+광전효과 식과 드 브로이 식을 각각 적용하면
+
+$$ E = hf = \frac{hc}{\lambda} = \frac{(\mathrm{ 6.62 \times 10^{-34} m^2 kg / s})(\mathrm{3.00 \times 10^8 m/s})}{\mathrm{ 3.31 \times 10^{-7} m }} = \mathrm{6.00 \times 10^{-19} J} $$
+
+$$ p = \frac{h}{\lambda} = \frac{\mathrm{ 6.62 \times 10^{-34} m^2 kg / s}}{\mathrm{ 3.31 \times 10^{-7} m }} = \mathrm{2.00 \times 10^{-19} kg\ m / s} $$
+
+가 됩니다.
+
++++
+
+❖ 아래 문제의 출처는 David Griffith 저 양자역학 3판에 있습니다.
+
+###### 문제 2
+
+$$ P_{ab}(t) $$가 시간 $$ t $$, 구간 $$ (a,\ b) $$에서 입자를 발견할 확률이라고 하자.
+
+(a) 다음을 증명하여라
+
+$$ \frac{dP_{ab}}{dt} = J(a,\ t) - J(b,\ t) $$
+
+여기서 **확률흐름** $$ J(x,\ t) $$는
+
+$$ J(x,\ t) \equiv \frac{i\hbar}{2m} \left( \Psi \frac{\partial \Psi^*}{\partial x} - \Psi^* \frac{\partial \Psi}{\partial x} \right) $$
+
+이다. 
+
+(b) $$ J(x,\ t) $$의 단위는 무엇인가?
+
+(c) 다음 파동함수에 대해 확률흐름을 구하여라.
+
+$$ \Psi (x,\ t) = Ae^{-a \left(\frac{mx^2}{\hbar} + it \right)} $$
+
+(양자역학 3판 문제 1.14)
+
++++
+
+
+
++++
+
+$$
+
+-->
